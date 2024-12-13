@@ -1,0 +1,70 @@
+{
+    "sex": [
+        "F",
+        "M"
+    ],
+    "address": [
+        "U",
+        "R"
+    ],
+    "famsize": [
+        "GT3",
+        "LE3"
+    ],
+    "Pstatus": [
+        "A",
+        "T"
+    ],
+    "Mjob": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+    ],
+    "Fjob": [
+        "teacher",
+        "other",
+        "services",
+        "health",
+        "at_home"
+    ],
+    "reason": [
+        "course",
+        "other",
+        "home",
+        "reputation"
+    ],
+    "schoolsup": [
+        "yes",
+        "no"
+    ],
+    "famsup": [
+        "no",
+        "yes"
+    ],
+    "paid": [
+        "no",
+        "yes"
+    ],
+    "activities": [
+        "no",
+        "yes"
+    ],
+    "nursery": [
+        "yes",
+        "no"
+    ],
+    "higher": [
+        "yes",
+        "no"
+    ],
+    "internet": [
+        "no",
+        "yes"
+    ],
+    "romantic": [
+        "no",
+        "yes"
+    ]
+}
