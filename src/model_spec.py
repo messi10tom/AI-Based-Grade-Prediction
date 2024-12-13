@@ -1,7 +1,8 @@
 class specs:
     batch_size = 32
-    epochs = 10
+    epochs = 1000
     learning_rate = 0.001
+    test_size = 0.2
     norm_specs = {
     "mean": {
         "sex": 0.4339080459770115,
