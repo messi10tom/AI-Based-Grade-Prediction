@@ -22,7 +22,16 @@ Build a model to predict a student’s final grade based on features such as att
 
 ## Results
 - **Model Performance**:
-    - ANN Model: RMSE = 2.5, Accuracy = 85%
+$$
+\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
+$$
+
+&nbsp;
+
+$$
+\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
+$$
+    - ANN Model: RMSE = 0.2576, Accuracy = 85%
 
 ## Challenges
 - **Feature Engineering**: Created new features to improve model performance.
@@ -64,3 +73,4 @@ This project is licensed under the Creative Commons Attribution 4.0 Internationa
 ---
 
 For further details, visit the [dataset page on UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Student+Performance).
+
