@@ -2,9 +2,26 @@ class specs:
     batch_size = 32
     epochs = 1000
     learning_rate = 0.001
+    input_size = 30
     test_size = 0.2
+    data_columns_to_encode = ['sex',
+                          'address',
+                          'famsize',
+                          'Pstatus',
+                          'Mjob',
+                          'Fjob',
+                          'reason',
+                          'schoolsup',
+                          'famsup',
+                          'paid',
+                          'activities',
+                          'nursery',
+                          'higher',
+                          'internet',
+                          'romantic',
+                          ]
     norm_specs = {
-    "mean": {
+    "mean_dict": {
         "sex": 0.4339080459770115,
         "age": 16.726053639846743,
         "address": 0.27298850574712646,
@@ -37,7 +54,7 @@ class specs:
         "G2": 11.246168582375478,
         "G3": 11.341954022988507
     },
-    "std": {
+    "std_dict": {
         "sex": 0.4956126043730357,
         "age": 1.2393806932778537,
         "address": 0.4454949847945289,
@@ -70,5 +87,75 @@ class specs:
         "G2": 3.283497381153174,
         "G3": 3.8629444050896353
     }
+}
+    encoding_vocab = {
+    "sex": [
+        "F",
+        "M"
+    ],
+    "address": [
+        "U",
+        "R"
+    ],
+    "famsize": [
+        "GT3",
+        "LE3"
+    ],
+    "Pstatus": [
+        "A",
+        "T"
+    ],
+    "Mjob": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+    ],
+    "Fjob": [
+        "teacher",
+        "other",
+        "services",
+        "health",
+        "at_home"
+    ],
+    "reason": [
+        "course",
+        "other",
+        "home",
+        "reputation"
+    ],
+    "schoolsup": [
+        "yes",
+        "no"
+    ],
+    "famsup": [
+        "no",
+        "yes"
+    ],
+    "paid": [
+        "no",
+        "yes"
+    ],
+    "activities": [
+        "no",
+        "yes"
+    ],
+    "nursery": [
+        "yes",
+        "no"
+    ],
+    "higher": [
+        "yes",
+        "no"
+    ],
+    "internet": [
+        "no",
+        "yes"
+    ],
+    "romantic": [
+        "no",
+        "yes"
+    ]
 }
     
