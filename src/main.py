@@ -119,7 +119,6 @@ def main():
 
         if st.session_state.df is not None:
 
-            with st.form("confirm_form"):
                 # Display submitted data as a DataFrame
                 df = pd.DataFrame([st.session_state.df])
 
@@ -131,10 +130,8 @@ def main():
                 '''
                 st.markdown(html, unsafe_allow_html=True)
 
-                # Confirm button
-                confirmed = st.form_submit_button("Confirm")
 
-                if confirmed:
+                if st.button("Confirm"):
                     # Load the model
                     loaded_model = RegressionModel(specs.input_size)
                     loaded_model.load_state_dict(torch.load('./src/regression_model.pth'))
@@ -160,6 +157,7 @@ def main():
                         prediction = loaded_model(df).item()
 
                     prediction = prediction * specs.norm_specs["std_dict"]["G3"] + specs.norm_specs["mean_dict"]["G3"]
+                    prediction = max(0, prediction)
 
                     st.success(f"The predicted final grade is: {prediction:.2f}")
 
@@ -168,6 +166,8 @@ def main():
         else:
             st.warning("No data available!")
 
+
+        st.warning("Click twice on the Go Back button to go back to the form")
         # Provide a "Go Back" button to return to the form
         if st.button("Go Back"):
             st.session_state.form_data = None  # Clear form data
