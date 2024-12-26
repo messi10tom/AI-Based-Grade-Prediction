@@ -22,15 +22,7 @@ Build a model to predict a student’s final grade based on features such as att
 
 ## Results
 - **Model Performance**:
-$$
-\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
-$$
 
-&nbsp;
-
-$$
-\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
-$$
     - ANN Model: RMSE = 0.2576
 
 ## Challenges
